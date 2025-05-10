@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+}
+
+span {
+    font-weight: 700;
+    color: #61503A;
+}
+
+i {
+    color: #61503A;
+}
+
+h2, h3 {
+    color: #61503A;
+}
+
+.inicio_container {
+    position: relative;
+    width: 100%;
+}
+
+#imagem_inicial {
+    display: block;
+    width: 100%;
+  position: relative;
+  z-index: 2; /* está na frente */
+}
+
+.inicio_container img[src="vector5.svg"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1; /* vai para trás */
+}
+
+header h2 {
+    color: white;
+}
+
+.igreja {
+    position: absolute;
+    top: 130px;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    color: white;
+    z-index: 3;
+}
+
+.artigos {
+    display: flex;
+    gap: 10px;
+}
+
+section, footer, .pastoral {
+    padding-left: 34px;
+    padding-right: 34px;
+}
+
+section p,
+section h2,
+section h3 {
+    color: black;
+}
+
+#horario_container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    z-index: 3;
+}
+
+#horarios {
+    display: flex;
+    gap: 23px;
+}
+
+.pastoral_container {
+    position: relative;
+    width: 100%;
+}
+
+#imagem_pastoral {
+    display: block;
+    width: 100%;
+}
+
+.pastoral {
+    position: absolute;
+    top: 100px;
+}
+
+.pastoral h2 {
+    color: white;
+}
+
+.pastoral_section {
+    padding: 0;
+}
+
+.footer_container {
+    display: flex;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.div_footer {
+    position: relative;
+    width: 100%;
+}
+
+#imagem_footer {
+    display: block;
+    width: 100%;
+}
+
+.footer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%;
+}
+
+.footer h2,
+.footer h3,
+.footer p {
+    color: white;
+}
+
+.footer img {
+    background-color: white;
+}
+
+.footer article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#redes_sociais {
+    display: flex;
+    gap: 30px;
+}
+
+#tres_primeiro {
+    display: flex;
+}
+
+#tres_segundo {
+    display: flex;
+}
+
+#tres_terceiro {
+    display: flex;
+}
+
+#canais {
+    display: flex;
+}
+
+#apoio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#apoio h2 {
+    padding-bottom: 23px;
+    color: #61503A;
+}
+
+#apoio h3 {
+    color: #61503A;
+}
+
+#apoio article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
