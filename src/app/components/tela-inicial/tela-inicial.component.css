@@ -1,187 +1,331 @@
+
 * {
-    margin: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: Arial, sans-serif;
+  color: #61503A;
+  background: #fff;
+}
+
+
 span {
-    font-weight: 700;
-    color: #61503A;
+  font-weight: 700;
+  color: #61503A;
+  font-size: 20px;
 }
 
 i {
-    color: #61503A;
+  color: #61503A;
 }
 
-h2, h3 {
-    color: #61503A;
-}
 
-.inicio_container {
-    position: relative;
-    width: 100%;
-}
+/* h2, h3 {
+  color: #61503A;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5em;
+} */
 
-#imagem_inicial {
-    display: block;
-    width: 100%;
+
+
+.header {
   position: relative;
-  z-index: 2; /* está na frente */
-}
-
-.inicio_container img[src="vector5.svg"] {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  z-index: 1; /* vai para trás */
+  height: 400px; /* Ajuste conforme a imagem */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
 }
 
-header h2 {
-    color: white;
+.background-img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2); 
+  z-index: 1;
+}
+
+.conteudo-header {
+  position: relative;
+  z-index: 2;
+  text-align: center;
 }
 
 .igreja {
-    position: absolute;
-    top: 130px;
-    text-align: center;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-    color: white;
-    z-index: 3;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
 }
 
-.artigos {
-    display: flex;
-    gap: 10px;
+.titulo-horario {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+}
+
+.horarios1 {
+    padding-top: 50%;
+}
+
+.horarios {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 500;
+  text-shadow: #fff;
 }
 
 section, footer, .pastoral {
-    padding-left: 34px;
-    padding-right: 34px;
+  padding: 0 34px;
+  max-width: 1200px;
+  margin: 1.5em auto;
 }
 
 section p,
 section h2,
 section h3 {
-    color: black;
+  color: #61503A;
 }
 
-#horario_container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    z-index: 3;
+.artigos {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-#horarios {
-    display: flex;
-    gap: 23px;
+.artigos img {
+  width: 30px;
+  height: auto;
 }
 
+.mensagem-texto p{
+    color: azure;
+}
+.mensagem-texto h2{
+    color: azure;
+}
 .pastoral_container {
-    position: relative;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #6e5842;
+  padding: 24px;
+  color: white;
+  max-width: 1200px;
+  margin: 0 auto 2em auto;
+  gap: 20px;
+  align-items: center;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  position: relative;
 }
 
-#imagem_pastoral {
-    display: block;
-    width: 100%;
+.pastoral_container .pastoral {
+  flex: 1;
+  text-align: center;
 }
 
-.pastoral {
-    position: absolute;
-    top: 100px;
+.pastoral_container h2 {
+  font-weight: 700;
+  margin-bottom: 12px;
 }
 
-.pastoral h2 {
-    color: white;
+.pastoral_container p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  white-space: pre-line;
+  text-align: justify;
 }
 
-.pastoral_section {
-    padding: 0;
+.pastor_image_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  position: relative;
+  max-width: 280px;
+}
+
+#img-pastor {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  object-fit: cover;
+  position: relative;
+}
+
+
+@media (min-width: 768px) {
+  .pastoral_container {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .pastoral_container .pastoral {
+    text-align: left;
+  }
+}
+
+
+section article {
+  margin-bottom: 2em;
+}
+
+section article p span {
+  font-weight: 700;
+  color: #61503A;
+  font-size: 18px;
+}
+
+
+.pix {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pix img {
+  width: 50px;
+  height: auto;
+}
+
+
+#apoio h2 {
+  padding-bottom: 23px;
+}
+
+#apoio article {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+#tres_primeiro,
+#tres_segundo,
+#tres_terceiro {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+#tres_primeiro div,
+#tres_segundo div,
+#tres_terceiro div {
+  text-align: center;
+}
+
+#tres_primeiro img,
+#tres_segundo img,
+#tres_terceiro img {
+  width: 80px;
+  height: auto;
+}
+
+
+#canais {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin: 1em 0;
+}
+
+#canais div {
+  text-align: center;
+}
+
+#canais img {
+  width: 50px;
+  height: auto;
+}
+
+#canais p {
+  margin-top: 5px;
 }
 
 .footer_container {
-    display: flex;
-    padding: 0;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  background: #6e5842;
+  position: relative;
+  color: white;
 }
 
 .div_footer {
-    position: relative;
-    width: 100%;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
 }
 
 #imagem_footer {
-    display: block;
-    width: 100%;
+  display: block;
+  width: 100%;
+  opacity: 0.15;
 }
 
 .footer {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 90%;
 }
 
 .footer h2,
 .footer h3,
 .footer p {
-    color: white;
-}
-
-.footer img {
-    background-color: white;
+  color: white;
 }
 
 .footer article {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #redes_sociais {
-    display: flex;
-    gap: 30px;
+  display: flex;
+  gap: 30px;
+  margin-top: 10px;
 }
 
-#tres_primeiro {
-    display: flex;
+#redes_sociais div {
+  text-align: center;
 }
 
-#tres_segundo {
-    display: flex;
+#redes_sociais img {
+  width: 40px;
+  height: auto;
 }
 
-#tres_terceiro {
-    display: flex;
-}
-
-#canais {
-    display: flex;
-}
-
-#apoio {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#apoio h2 {
-    padding-bottom: 23px;
-    color: #61503A;
-}
-
-#apoio h3 {
-    color: #61503A;
-}
-
-#apoio article {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#redes_sociais a {
+  margin-top: 5px;
+  font-size: 14px;
+  text-decoration: none;
+  text-decoration-line: none;
+  color: #fff;
 }
