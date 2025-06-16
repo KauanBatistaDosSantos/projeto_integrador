@@ -56,7 +56,18 @@
       profissional e prestar serviços de qualidade.
     </p>
   </article>
+  
+  <section class="eventos">
+    <h2>Próximos Eventos</h2>
+    <ul>
+      <li *ngFor="let evento of eventos">
+        <strong>{{ evento.data | date:'dd/MM/yyyy' }}</strong> - {{ evento.nome }}
+      </li>
+    </ul>
+  </section>
 </section>
+
+
 
 <section class="mensagem-pastoral-container pastoral_container">
   <div class="mensagem-texto">
